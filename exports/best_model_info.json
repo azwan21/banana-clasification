@@ -1,0 +1,23 @@
+{
+  "best_model": "MobileNetV2 Transfer Learning + Fine-Tuning",
+  "image_size": [
+    224,
+    224
+  ],
+  "num_classes": 4,
+  "class_names": [
+    "overripe",
+    "ripe",
+    "rotten",
+    "unripe"
+  ],
+  "metrics": {
+    "train_loss": 0.012631758116185665,
+    "train_accuracy": 0.9964756369590759,
+    "val_loss": 0.02761853300035,
+    "val_accuracy": 0.9918397665023804,
+    "test_loss": 0.036174289882183075,
+    "test_accuracy": 0.9896142482757568,
+    "fit_status": "GOOD FIT"
+  }
+}

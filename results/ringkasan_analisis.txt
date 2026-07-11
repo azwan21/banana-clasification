@@ -1,0 +1,16 @@
+Hasil eksperimen menunjukkan bahwa CNN From Scratch memperoleh training accuracy
+97.52%, validation accuracy
+97.48%, dan testing accuracy
+97.26%. Model ini dikategorikan sebagai
+GOOD FIT.
+
+MobileNetV2 dengan feature extraction dan fine-tuning memperoleh training accuracy
+99.65%, validation accuracy
+99.18%, dan testing accuracy
+98.96%. Model ini dikategorikan sebagai
+GOOD FIT.
+
+MobileNetV2 menghasilkan testing accuracy lebih tinggi (98.96%) dibandingkan CNN From Scratch (97.26%). Model terbaik berdasarkan testing accuracy adalah
+MobileNetV2 Transfer Learning + Fine-Tuning. Confusion matrix dan classification report perlu digunakan
+untuk mengidentifikasi kelas yang paling mudah dan paling sulit dikenali serta
+untuk menilai precision, recall, dan F1-score setiap kelas.

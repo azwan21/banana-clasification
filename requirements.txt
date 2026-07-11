@@ -1,0 +1,22 @@
+# ==========================================================
+# AIoT CHALLENGE 2026 - Python Dependencies
+# Smart Banana Ripeness Sorting System
+# ==========================================================
+
+# Core Web Dashboard Server
+flask>=3.0.0
+
+# Computer Vision & CNN Processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Deep Learning Framework (CNN Inference)
+# Note: Can be omitted if using standalone TF-Lite fallback
+tensorflow>=2.15.0
+
+# IoT Physical Bridging
+pyserial>=3.5
+firebase-admin>=6.2.0
+
+# Drawing Utilities for Wiring Diagram
+pillow>=10.0.0
