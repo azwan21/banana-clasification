@@ -14,9 +14,9 @@
 
 // Define relay pins
 const int RELAY_1_PIN = 14; // D5
-const int RELAY_2_PIN = 12; // D6
-const int RELAY_3_PIN = 13; // D7
-const int RELAY_4_PIN = 15; // D8
+const int RELAY_2_PIN = 27; // D6
+const int RELAY_3_PIN = 26; // D7
+const int RELAY_4_PIN = 25; // D8
 const int LED_INDICATOR = 2; // D4 (Built-in LED, active-LOW on ESP8266)
 
 // Relay Logic Configuration

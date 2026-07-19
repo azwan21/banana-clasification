@@ -1,9 +1,11 @@
 # ==========================================================
 # AIoT Smart Banana Ripeness Sorting System - Git Attributes
 # ==========================================================
+
 # 1. Line Ending Handling
 # Auto-detect text files and normalize line endings to LF on commit
 * text=auto
+
 # Explicitly normalize line endings for source code files
 *.py text eol=lf
 *.ino text eol=lf
@@ -12,16 +14,22 @@
 *.json text eol=lf
 *.md text eol=lf
 *.txt text eol=lf
+*.csv text eol=lf
+
 # 2. Binary files - Do not modify line endings
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.gif binary
 *.ico binary
-# 3. Git Large File Storage (LFS) for Deep Learning Models
-# Tracks Keras, TensorFlow, and TF-Lite binary model files using Git LFS
+
+# 3. Git Large File Storage (LFS) for Deep Learning Models & Data
+# Tracks Keras, TensorFlow, PyTorch, ONNX and TF-Lite binary model files using Git LFS
 *.keras filter=lfs diff=lfs merge=lfs -text
 *.h5 filter=lfs diff=lfs merge=lfs -text
 *.tflite filter=lfs diff=lfs merge=lfs -text
 *.pb filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text

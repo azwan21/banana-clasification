@@ -63,7 +63,7 @@ class AIoTSystemState:
         self.firebase_status = "Not Configured"
         
         # AI Config
-        self.model_path = os.path.join("exports", "best_datatrash_model.keras")
+        self.model_path = os.path.join("exports", "best_datatrash_model.h5")
         self.class_names = ["overripe", "ripe", "rotten", "unripe"]
         self.confidence_threshold = 0.60
         self.debounce_frames = 5
@@ -790,7 +790,8 @@ def run_ai_inference():
         
         # Normalization parameters (MobileNetV2 inputs expect [224, 224, 3])
         target_size = (224, 224)
-        resized_img = cv2.resize(frame, target_size)
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        resized_img = cv2.resize(rgb_frame, target_size)
         
         # Initialize default predictions
         pred_class = "idle"
@@ -799,8 +800,8 @@ def run_ai_inference():
         # 3. Model Inference Execution
         if model:
             try:
-                # Preprocess input image (scale [0, 1] or [-1, 1])
-                input_data = np.expand_dims(resized_img.astype(np.float32) / 255.0, axis=0)
+                # Model already has a Rescaling layer (1/127.5 - 1), so we feed raw [0, 255] pixels
+                input_data = np.expand_dims(resized_img.astype(np.float32), axis=0)
                 
                 if tflite_mode:
                     # Run TF-Lite interpreter
